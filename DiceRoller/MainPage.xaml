@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRoller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="0"
+                FontSize="Large"                   
+                x:Name="DiceResult"/>
+
+            <Image
+                 x:Name="DiceTypeImage"
+                 Source="d6.svg"
+                 HeightRequest="185"
+                 Aspect="AspectFit"
+                 SemanticProperties.Description="Dice Icon" />
+
+            <Picker
+                x:Name="DiceTypePicker"
+                SelectedIndexChanged="DiceTypePicker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>4</x:String>
+                    <x:String>6</x:String>
+                    <x:String>8</x:String>
+                    <x:String>10</x:String>
+                    <x:String>12</x:String>
+                    <x:String>20</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            <Image
+                Source="d6.svg"
+                WidthRequest="225"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Dice Icon" />
+
+            <Button
+                x:Name="DiceBtn"
+                Text="Rolar um dado" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="DiceBtn_Clicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

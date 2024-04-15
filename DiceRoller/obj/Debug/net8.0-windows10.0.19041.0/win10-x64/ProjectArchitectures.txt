@@ -1,0 +1,1 @@
+D:\Professor\2DS\PAM-I\Projetos\PAMI-DiceRoller\DiceRoller\DiceRoller\DiceRoller.csproj;x64
